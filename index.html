@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Configuration Tool - Calculate Parallel and Series</title>
+    <meta name="description"
+        content="Easily calculate the configuration of your battery pack with our Battery Configuration Tool. Determine the number of cells in parallel and series for your project.">
+    <meta name="keywords" content="battery configuration, parallel cells, series cells, battery pack, cell capacity">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Battery Configuration Tool</h1>
+    <div class="container">
+        <div class="form-container">
+            <label for="parallel">Parallel:</label>
+            <input type="number" id="parallel" placeholder="Enter parallel count">
+            <br>
+            <label for="series">Series:</label>
+            <input type="number" id="series" placeholder="Enter series count">
+            <br>
+            <label for="defaultVoltage">Default Cell Voltage (V):</label>
+            <input type="number" id="defaultVoltage" placeholder="Enter default voltage">
+            <br>
+            <label for="defaultCapacity">Default Cell Capacity (mAh):</label>
+            <input type="number" id="defaultCapacity" placeholder="Enter default capacity">
+            <br>
+            <div class="button-container">
+                <button onclick="generateCellCapacityFields()">Generate Cell Capacity Fields</button>
+                <button onclick="findBalancedConfig()">Find Balanced Configuration</button>
+            </div>
+            <div id="fields"></div>
+        </div>
+        <div class="result-container">
+            <div id="result">
+                <h2>Most Balanced Parallel Groups:</h2>
+                <div id="voltageResults"></div>
+                <div id="totalCapacityResult"></div>
+                <div id="parallelGroupResults"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
